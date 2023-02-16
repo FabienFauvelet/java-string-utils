@@ -1,5 +1,6 @@
 package org.example;
 
+import static org.example.StringUtils.removeAccents;
 import static org.example.StringUtils.toSnakeCase;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -26,6 +27,6 @@ public class AppTest
     {
         String initial="āăąēîïĩíĝġńñšŝśûůŷ";
         String expected="aaaeiiiiggnnsssuuy";
-        assertEquals(expected,toSnakeCase(initial));
+        assertEquals(expected,removeAccents(initial));
     }
 }
